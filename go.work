@@ -1,9 +1,13 @@
 go 1.22.2
 
 use (
+	./apps/bitget
 	./apps/gateway
-	./modules/auth
-	./modules/order
-	./modules/product
-	./modules/user
+	./apps/shopee
+	./apps/telegram
+	./apps/zalo
+	./modules/bitget
+	./modules/shopee
+	./modules/telegram
+	./modules/zalo
 )
