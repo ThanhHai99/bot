@@ -1,0 +1,9 @@
+go 1.22.2
+
+use (
+	./apps/gateway
+	./modules/auth
+	./modules/order
+	./modules/product
+	./modules/user
+)
