@@ -1,7 +1,9 @@
 go 1.22.2
 
 use (
+	./apps/bitget
 	./apps/gateway
+<<<<<<< HEAD
 	./apps/messenger
 	./apps/telegram
 	./apps/tiktok
@@ -9,5 +11,13 @@ use (
 	./modules/messenger
 	./modules/telegram
 	./modules/tiktok
+=======
+	./apps/shopee
+	./apps/telegram
+	./apps/zalo
+	./modules/bitget
+	./modules/shopee
+	./modules/telegram
+>>>>>>> refs/remotes/origin/master
 	./modules/zalo
 )
