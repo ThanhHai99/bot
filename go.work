@@ -2,8 +2,12 @@ go 1.22.2
 
 use (
 	./apps/gateway
-	./modules/auth
-	./modules/order
-	./modules/product
-	./modules/user
+	./apps/messenger
+	./apps/telegram
+	./apps/tiktok
+	./apps/zalo
+	./modules/messenger
+	./modules/telegram
+	./modules/tiktok
+	./modules/zalo
 )
