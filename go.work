@@ -4,6 +4,7 @@ use (
 	./apps/bitget
 	./apps/gateway
 	./apps/messenger
+	./apps/shopee
 	./apps/telegram
 	./apps/tiktok
 	./apps/zalo
