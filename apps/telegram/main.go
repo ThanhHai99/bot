@@ -9,8 +9,8 @@ import (
 )
 
 const (
-	botToken = "YOUR_BOT_TOKEN_HERE"
-	chatID   = 123456789 // Chat ID của Telegram là kiểu số (int64)
+	botToken = "7038615031:AAHIDin4IcQ_kBWPmtq1RzYw2G7Y_Vujb3w"
+	chatID   = 2174916878 // Chat ID của Telegram là kiểu số (int64)
 )
 
 func main() {
@@ -36,7 +36,7 @@ func main() {
 		}
 
 		// 3. Sử dụng thư viện để gửi tin nhắn
-		msg := tgbotapi.NewMessage(int64(chatID), input.Message)
+		msg := tgbotapi.NewMessageToChannel("nz77nz8_bot", input.Message)
 		msg.ParseMode = "Markdown" // Hỗ trợ định dạng đậm/nghiêng
 
 		_, err = bot.Send(msg)
@@ -48,5 +48,5 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"status": "Thành công!"})
 	})
 
-	r.Run(":8080")
+	r.Run(":3008")
 }
