@@ -10,7 +10,7 @@ import (
 
 const (
 	botToken = "7038615031:AAHIDin4IcQ_kBWPmtq1RzYw2G7Y_Vujb3w"
-	chatID   = 2174916878 // Chat ID của Telegram là kiểu số (int64)
+	chatID   = -1002174916878 // Chat ID của Telegram là kiểu số (int64)
 )
 
 func main() {
@@ -36,12 +36,13 @@ func main() {
 		}
 
 		// 3. Sử dụng thư viện để gửi tin nhắn
-		msg := tgbotapi.NewMessageToChannel("nz77nz8_bot", input.Message)
+		msg := tgbotapi.NewMessage(chatID, input.Message)
 		msg.ParseMode = "Markdown" // Hỗ trợ định dạng đậm/nghiêng
 
 		_, err = bot.Send(msg)
 		if err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": "Gửi Telegram thất bại"})
+			log.Printf("Lỗi khi gửi Telegram: %v", err)
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Gửi Telegram thất bại", "details": err.Error()})
 			return
 		}
 
